@@ -1,0 +1,65 @@
+[
+    {
+        "month": "January",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 1750
+            },
+            {
+                "id": 2,
+                "date": "15-12-2022",
+                "category": "luxo",
+                "description": "restaurante",
+                "value": 300
+            },
+            {
+                "id": 3,
+                "date": "19-12-2022",
+                "category": "despesas",
+                "description": "gasolina",
+                "value": 300
+            }
+        ]
+    },
+    {
+        "month": "February",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 200
+            },
+            {
+                "id": 2,
+                "date": "19-12-2022",
+                "category": "despesas",
+                "description": "restaurante",
+                "value": 300
+            },
+            {
+                "id": 3,
+                "date": "23-12-2022",
+                "category": "despesas",
+                "description": "gasolina",
+                "value": 1500
+            }
+        ]
+    },
+    {
+        "month": "March",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    }
+]
