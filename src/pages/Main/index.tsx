@@ -9,18 +9,15 @@ const Main: React.FC = () => {
     const [selectedMonth, setSelectedMonth] = useState(0)
 
     const renderSelectMonth = () => {
-        return expenses.map((item, index) => (<Button colorScheme='blue' variant='outline' marginLeft={5} onClick={() => setSelectedMonth(index)}>{item.month}</Button>))
+        return expenses.map((item, index) => (<Button color={'#3B3B98'} variant='outline' marginLeft={5} onClick={() => setSelectedMonth(index)}>{item.month}</Button>))
     }
-    
+
     return (
         <Container>
-            <div style={{padding: '10px'}}>
+            <div style={{ padding: '10px' }}>
                 {renderSelectMonth()}
             </div>
-            <div>
-                <h1>{expenses[selectedMonth].month}</h1>
-                <Table expenses={expenses[selectedMonth].expenses} />
-            </div>
+            <Table expenses={expenses[selectedMonth].expenses} month={expenses[selectedMonth].month} />
         </Container>
     )
 }

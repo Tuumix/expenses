@@ -1,33 +1,44 @@
 import React from 'react';
-import { TD, TH } from './styles';
+import { RowHeader, Container, RowContainer, Title } from './styles';
 import { TableProps } from './types';
 
 const Table: React.FC<TableProps> = (props) => {
-    const { expenses } = props;
+    const { expenses, month } = props;
+
+    const sum = expenses.reduce(function (acc, obj) { return acc + obj.value; }, 0);
+
+    const formatCurrency = (value: number) => {
+        return (value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    }
 
     const renderItems = () => {
         return expenses.map(item => (
-            <tr>
-                <TD>{item.description}</TD>
-                <TD>{item.date}</TD>
-                <TD>{item.category}</TD>
-                <TD>{item.value}</TD>
-            </tr>
+            <RowContainer>
+                <div style={{flexBasis: '20%'}}>{item.description}</div>
+                <div style={{flexBasis: '20%'}}>{item.date}</div>
+                <div style={{flexBasis: '20%'}}>{item.category}</div>
+                <div style={{flexBasis: '20%'}}>{formatCurrency(item.value)}</div>
+            </RowContainer>
         ))
     }
 
     return (
-        <div>
-            <table>
-                <tr>
-                    <TH>Description</TH>
-                    <TH>Date</TH>
-                    <TH>Category</TH>
-                    <TH>Value</TH>
-                </tr>
-               {renderItems()}
-            </table>
-        </div>
+        <Container>
+            <Title>{month}</Title>
+            <ul style={{marginTop: '10px'}}>
+                <RowHeader>
+                    <div style={{flexBasis: '20%'}}>Description</div>
+                    <div style={{flexBasis: '20%'}}>Date</div>
+                    <div style={{flexBasis: '20%'}}>Category</div>
+                    <div style={{flexBasis: '20%'}}>Value</div>
+                </RowHeader>
+                {renderItems()}
+            </ul>
+            {/* <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <TextSpan>Total</TextSpan>
+                <TextSpan>{sum}</TextSpan>
+            </div> */}
+        </Container>
     )
 }
 

@@ -1,6 +1,6 @@
 [
     {
-        "month": "January",
+        "month": "JANUARY",
         "expenses": [
             {
                 "id": 1,
@@ -26,7 +26,7 @@
         ]
     },
     {
-        "month": "February",
+        "month": "FEBRUARY",
         "expenses": [
             {
                 "id": 1,
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "month": "March",
+        "month": "MARCH",
         "expenses": [
             {
                 "id": 1,
