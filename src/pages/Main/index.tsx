@@ -7,9 +7,14 @@ import { Report } from './types'
 const Main: React.FC = () => {
     const expenses: Report[] = require('../../auxiliar.json');
     const [selectedMonth, setSelectedMonth] = useState(0)
-
+    // const [compare, setCompare] = useState(false);
+    
     const renderSelectMonth = () => {
-        return expenses.map((item, index) => (<Button color={'#3B3B98'} variant='outline' marginLeft={5} onClick={() => setSelectedMonth(index)}>{item.month}</Button>))
+        return expenses.map((item, key) => (<Button key={key} color={'#3B3B98'} size='ls' variant='outline' marginLeft={5} onClick={() => selectMonth(key)}>{item.month}</Button>))
+    }
+
+    const selectMonth = (index: number) => {
+        setSelectedMonth(index);
     }
 
     return (
@@ -18,6 +23,9 @@ const Main: React.FC = () => {
                 {renderSelectMonth()}
             </div>
             <Table expenses={expenses[selectedMonth].expenses} month={expenses[selectedMonth].month} />
+            {/* <div>
+                <Button bgColor={'pink'} onClick={() => setCompare(true)} >Compare</Button>
+            </div> */}
         </Container>
     )
 }

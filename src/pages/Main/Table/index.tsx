@@ -4,7 +4,6 @@ import { TableProps } from './types';
 
 const Table: React.FC<TableProps> = (props) => {
     const { expenses, month } = props;
-
     const sum = expenses.reduce(function (acc, obj) { return acc + obj.value; }, 0);
 
     const formatCurrency = (value: number) => {
@@ -12,8 +11,8 @@ const Table: React.FC<TableProps> = (props) => {
     }
 
     const renderItems = () => {
-        return expenses.map(item => (
-            <RowContainer>
+        return expenses.map((item, key) => (
+            <RowContainer key={key}>
                 <div style={{flexBasis: '20%'}}>{item.description}</div>
                 <div style={{flexBasis: '20%'}}>{item.date}</div>
                 <div style={{flexBasis: '20%'}}>{item.category}</div>
@@ -34,10 +33,10 @@ const Table: React.FC<TableProps> = (props) => {
                 </RowHeader>
                 {renderItems()}
             </ul>
-            {/* <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <TextSpan>Total</TextSpan>
-                <TextSpan>{sum}</TextSpan>
-            </div> */}
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p>Total</p>
+                <p>{sum}</p>
+            </div>
         </Container>
     )
 }

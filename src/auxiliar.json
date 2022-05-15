@@ -57,6 +57,129 @@
             {
                 "id": 1,
                 "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            },
+            {
+                "id": 2,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "comida",
+                "value": 400
+            },
+            {
+                "id": 3,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "condominio",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "APRIL",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "MAY",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "JUNE",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "JULY",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "AUGUST",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "SEPTEMBER",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "OCTOBER",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "NOVEMBER",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
+                "description": "aluguel",
+                "value": 400
+            }
+        ]
+    },
+    {
+        "month": "DECEMBER",
+        "expenses": [
+            {
+                "id": 1,
+                "date": "12-12-2022",
+                "category": "despesas",
                 "description": "aluguel",
                 "value": 400
             }
