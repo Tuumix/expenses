@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                         </BreadcrumbItem>
 
                         <BreadcrumbItem>
-                            <BreadcrumbLink href='/teste'>Expenses</BreadcrumbLink>
+                            <BreadcrumbLink href='/expenses'>Expenses</BreadcrumbLink>
                         </BreadcrumbItem>
 
                         <BreadcrumbItem>

@@ -2,8 +2,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import Expenses from './pages/Expenses';
 import Main from './pages/Main';
-import Teste from './pages/Teste';
 
 const App: React.FC = () => {
 
@@ -13,7 +13,7 @@ const App: React.FC = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path='/teste' element={<Teste />} />
+          <Route path='/expenses' element={<Expenses />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

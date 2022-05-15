@@ -1,5 +1,5 @@
 import React from 'react';
-import { RowHeader, Container, RowContainer, Title } from './styles';
+import { RowHeader, Container, RowContainer, Title, TotalContainer } from './styles';
 import { TableProps } from './types';
 
 const Table: React.FC<TableProps> = (props) => {
@@ -16,7 +16,7 @@ const Table: React.FC<TableProps> = (props) => {
                 <div style={{flexBasis: '20%'}}>{item.description}</div>
                 <div style={{flexBasis: '20%'}}>{item.date}</div>
                 <div style={{flexBasis: '20%'}}>{item.category}</div>
-                <div style={{flexBasis: '20%'}}>{formatCurrency(item.value)}</div>
+                <div style={{flexBasis: '20%'}}>R$ {formatCurrency(item.value)}</div>
             </RowContainer>
         ))
     }
@@ -33,10 +33,10 @@ const Table: React.FC<TableProps> = (props) => {
                 </RowHeader>
                 {renderItems()}
             </ul>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p>Total</p>
-                <p>{sum}</p>
-            </div>
+            <TotalContainer>
+                <span>Total</span>
+                <span>R$ {formatCurrency(sum)}</span>
+            </TotalContainer>
         </Container>
     )
 }
