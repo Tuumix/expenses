@@ -1,11 +1,10 @@
 import React from 'react'
 
-
 const Main: React.FC = () => {
 
     return (
         <div>
-            <h1>udieghiduhde</h1>
+            <h1>Still in development</h1>
         </div>
     )
 }
